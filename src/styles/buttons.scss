@@ -1,0 +1,28 @@
+@import './variable';
+
+.btn {
+  padding: .55rem 1rem;
+  border-radius: $radius;
+  font-size: .95rem;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+
+  &--primary {
+    background: $primary;
+    color: white;
+
+    &:hover {
+      background: $primary-dark;
+    }
+  }
+
+  &--danger {
+    background: $danger;
+    color: white;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}

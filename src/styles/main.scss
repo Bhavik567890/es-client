@@ -1,0 +1,53 @@
+@import './variable';
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.app-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  h1 { margin: 0; }
+}
+
+.container { padding: 1.5rem; max-width: 900px; margin: 0 auto; }
+
+.post-card {
+  background:white;
+  padding:1rem;
+  border-radius:8px;
+  margin-bottom:1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  h3 { margin: 0 0 .25rem 0; }
+}
+
+.highlight {
+  background: $highlight-bg;
+  padding: .05rem .15rem;
+  border-radius: 3px;
+}
+
+.floating-highlight {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display:flex;
+  gap:.5rem;
+  z-index: 2000;
+  button {
+    background: $primary;
+    color: white;
+    border: none;
+    padding: .45rem .8rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}

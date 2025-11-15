@@ -1,0 +1,23 @@
+@import './variable';
+
+.post-list {
+  .page-header {
+    margin-bottom: 1.4rem;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .posts-grid {
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

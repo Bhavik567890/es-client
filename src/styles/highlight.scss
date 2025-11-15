@@ -1,0 +1,34 @@
+@import './variable';
+
+.highlight {
+  background: $highlight-bg;
+  padding: 0 .15rem;
+  border-radius: 3px;
+}
+
+.floating-highlight {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: .5rem;
+  z-index: 2000;
+
+  button {
+    background: $primary;
+    color: white;
+    border: none;
+    padding: .45rem .8rem;
+    border-radius: $radius;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-dark;
+    }
+  }
+
+  .floating-clear {
+    background: $danger !important;
+  }
+}
