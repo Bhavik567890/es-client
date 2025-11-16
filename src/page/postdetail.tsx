@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store";
@@ -7,23 +8,9 @@ import FloatingHighlightBtn from "../components/floatinghighligh-btn";
 import { useAppDispatch } from "../hooks";
 import "../../src/styles/post-detail.scss";
 import Loader from "../components/loader";
-import toast from "react-hot-toast";
+import {  highlightText } from "../utils/util";
 
-const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const highlightText = (text: string, word: string | null) => {
-  if (!word) return text;
-  const re = new RegExp(`\\b(${escapeRegExp(word)})\\b`, "gi");
-  return text.split(re).map((part, i) =>
-    re.test(part) ? (
-      <mark key={i} className="highlight">
-        {part}
-      </mark>
-    ) : (
-      part
-    )
-  );
-};
 
 const PostDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
